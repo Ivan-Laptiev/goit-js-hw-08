@@ -11,6 +11,6 @@ if (loaded) {
 
 player.on('timeupdate', throttle(onCurrentTime, 1000));
 
-function onCurrentTime(seconds) {
-    localStorage.setItem('videoplayer-current-time', JSON.stringify(seconds));
+function onCurrentTime(e) {
+    localStorage.setItem('videoplayer-current-time', JSON.stringify(e.seconds));
 }
